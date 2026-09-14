@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Регистрация</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f1f5f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 28px 26px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.06);
+  }
+
+  h1 {
+    margin: 0 0 26px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+  }
+
+  .field { margin-bottom: 18px; }
+
+  .field label {
+    display: block;
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 8px;
+  }
+
+  .field input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #0f172a;
+    transition: border-color .15s, box-shadow .15s;
+  }
+
+  .field input::placeholder { color: #94a3b8; }
+
+  .field input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+  }
+
+  button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+  }
+  button:hover { background: #1d4ed8; }
+  button:active { transform: scale(.99); }
+
+  .hint {
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .hint a { color: #2563eb; text-decoration: none; }
+  .hint a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Регистрация</h1>
+
+    <form onsubmit="event.preventDefault(); alert('Форма отправлена');">
+      <div class="field">
+        <label for="login">Логин</label>
+        <input id="login" name="login" placeholder="Введите логин">
+      </div>
+
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" placeholder="Минимум 6 символов">
+      </div>
+
+      <div class="field">
+        <label for="full_name">ФИО</label>
+        <input id="full_name" name="full_name" placeholder="Иванов Иван Иванович">
+      </div>
+
+      <div class="field">
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" placeholder="+7 999 123-45-67">
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="example@mail.ru">
+      </div>
+
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <p class="hint">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+  </div>
+
+</body>
+</html>

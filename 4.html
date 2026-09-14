@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Личный кабинет</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f1f5f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 24px 22px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.06);
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    margin: 0 0 4px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+  }
+
+  h2 {
+    margin: 0 0 18px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .field { margin-bottom: 16px; }
+
+  .field label {
+    display: block;
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 8px;
+  }
+
+  .field input,
+  .field select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: inherit;
+    transition: border-color .15s, box-shadow .15s;
+  }
+
+  .field input:focus,
+  .field select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 6px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+  }
+  button:hover { background: #1d4ed8; }
+  button:active { transform: scale(.99); }
+
+  .back {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 18px;
+    text-decoration: none;
+  }
+  .back:hover { color: #2563eb; }
+</style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="card">
+      <h1>Личный кабинет</h1>
+      <p class="subtitle">Здравствуйте, Иван Петров</p>
+    </div>
+
+    <div class="card">
+      <h2>Создать заявку</h2>
+
+      <form onsubmit="event.preventDefault(); alert('Заявка создана');">
+        <div class="field">
+          <label for="spectacle">Спектакль</label>
+          <select id="spectacle">
+            <option>Щелкунчик — 2025-12-01 19:00:00 (вечерний сеанс)</option>
+            <option>Лебединое озеро — 2025-12-05 18:00:00</option>
+            <option>Ромео и Джульетта — 2025-12-10 19:30:00</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="qty">Количество билетов</label>
+          <input id="qty" type="number" value="1" min="1">
+        </div>
+
+        <div class="field">
+          <label for="payment">Оплата</label>
+          <select id="payment">
+            <option>card</option>
+            <option>cash</option>
+          </select>
+        </div>
+
+        <button type="submit">Отправить</button>
+      </form>
+
+      <a class="back" href="my-requests.html">Мои заявки →</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

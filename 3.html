@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мои заявки</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f1f5f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.06);
+  }
+
+  h1 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead th {
+    text-align: left;
+    padding: 12px 10px;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 1.5px solid #e2e8f0;
+  }
+
+  tbody td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #0f172a;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .back {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+    margin-top: 18px;
+    text-decoration: none;
+  }
+  .back:hover { color: #2563eb; }
+</style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+      <h1>Мои заявки</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Спектакль</th>
+            <th>Дата</th>
+            <th>Кол-во</th>
+            <th>Оплата</th>
+            <th>Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Щелкунчик</td>
+            <td>2025-12-05 18:00:00</td>
+            <td>1</td>
+            <td>card</td>
+            <td><span class="badge">new</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a class="back" href="cabinet.html">← Вернуться в кабинет</a>
+    </div>
+  </div>
+
+</body>
+</html>
